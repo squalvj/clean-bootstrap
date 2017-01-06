@@ -31,6 +31,15 @@ h3 {
   font-family: "roboto-l";
   font-size: 15px;
 }
+.absolute {
+  position: absolute !important;
+}
+.center-things {
+  left: 0px;
+  right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .navbar {
   -webkit-transition: all 0.6s ease-out;
   -moz-transition: all 0.6s ease-out;
@@ -107,13 +116,14 @@ h3 {
   margin-top: 200px;
 }
 #section-first {
-  padding-top: 80px;
+  padding-top: 80px 0px;
   color: #34495e;
   min-height: 100vh;
   background-color: #ecf0f1;
 }
 #section-first h1 {
   position: relative;
+  font-family: "roboto-l";
 }
 #section-first h1 .glyphicon {
   top: 10px;
@@ -132,6 +142,9 @@ h3 {
 }
 #section-first .trio .col-md-4 a:hover {
   text-decoration: none;
+}
+#section-first .trio .col-md-4 hr {
+  border-bottom: 1px solid #34495e;
 }
 #section-first .trio .wrapper-circle {
   width: 230px;
@@ -154,7 +167,47 @@ h3 {
 }
 #section-second {
   min-height: 100vh;
-  background-color: #83d6de;
+  background-color: #64ddbb;
+  padding: 80px 0px;
+}
+#section-second .row {
+  position: relative;
+}
+#section-second .row .wrapper-circle2 {
+  width: 230px;
+  height: 230px;
+  border-radius: 140px;
+  background-color: transparent;
+  margin: 0 auto;
+  border: 1px solid #34495e;
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#section-second .row .wrapper-circle2 h4 {
+  font-family: "roboto-b";
+  color: #34495e;
+}
+#section-second .row .wrapper-circle2 img {
+  margin: 0 auto;
+  margin-top: 34%;
+  width: 65px;
+}
+#section-second .row .col-md-4 {
+  position: relative;
+}
+#section-second .row .col-md-4 .section2-line {
+  width: 90%;
+  background-color: #34495e;
+  height: 3px;
+  position: absolute;
+  top: 110px;
+}
+#section-second .row .col-md-4:first-child {
+  padding-top: 40px;
+}
+#section-second .row .col-md-4:last-child {
+  padding-top: 40px;
 }
 @media (max-width: 766px) {
   .navbar {
