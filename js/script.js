@@ -9,6 +9,19 @@ $(document).ready(function($) {
 	TweenMax.set(section2_p, {opacity: "0"});
 	TweenMax.set($(".wrapper-circle2-h"), {opacity: "0"});
 	
+	function showPhone(){
+		var text = new SplitText(".phone-header", {linesChars:"line++"});
+		var thumb = $(".thumb");
+		TweenLite.set(".phone-header", {perspective:400});
+		TweenMax.staggerFrom(text.chars, 0.8, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50%", ease:Back.easeOut}, 0.2, allDone);
+		TweenMax.from(thumb, 1, {opacity:0, scale:0,y:-100, ease:Power3.easeInOut, delay:1}).repeat(2).yoyo(true).play();
+	}
+
+	function allDone(){
+		text.revert();
+	}
+
+	
 
 	function showHeaderDesc(){
 		var header_desc = $(".header-desc");
@@ -33,9 +46,9 @@ $(document).ready(function($) {
 
 	$(window).scroll(function() {
 	  if ($(document).scrollTop() > 50) {
-	    $('nav').addClass('shrink');
+	   
 	  } else {
-	    $('nav').removeClass('shrink');
+	    
 	  }
 	});
 
@@ -50,7 +63,8 @@ $(document).ready(function($) {
 		i++;
 	   }
 	   if(wS > 1200 && i < 2){
-
+	   	showPhone();
+	   	i++
 	   }
 	});
 
@@ -93,25 +107,10 @@ $(document).ready(function($) {
 	})
 
 	$(".wrapper-circle2").hover(function() {
-	       var wrapper = $(this).parent().siblings('.wrapper-circle2-h');
-	       expand(wrapper);
-	       var parent = $(this).parent();
-	       var line = $(".section2-line")
-	       console.log(line);
-	       TweenLite.to(line, 1, {height: "100px", backgroundColor: "transparent", border:"1px solid #34495e", opacity: "0"})
+	       
 	},  function(){
-		var wrapper = $(this).parent().siblings('.wrapper-circle2-h');
-		shrink(wrapper)
-	});
-
-	function expand(e){
-		TweenLite.to(e, 1, {width: "100%", opacity: "1"});
-	}
-	function shrink(e){
-		TweenLite.to(e, 1, {width: "230px", opacity: "0.3"});
-		TweenLite.to(e, 1, {opacity: "0", delay:21});
 		
-	}
+	});
 
 	
 
