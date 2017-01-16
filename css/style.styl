@@ -159,46 +159,84 @@ h3
 		width 50%
 		min-height 100vh;
 		position relative
-		padding 100px 0px
+		padding 150px 0px
 		.phone-wrapper
 			width 400px
 			min-height auto
 			margin-left auto
 			margin-right auto
 			position relative
-			.wrapper-box
-				width 400px;
-				position absolute
-				top 300px
-				left 0
-				right 0
-				margin-left auto
-				margin-right auto
-				background-color red
-			.phone-header
-				font-family "roboto-b"
-				font-size 33px
-				position absolute
-				top: 100px;
-				color #3f3f3f
-				left 0px
-				right 0px
-				margin-left auto
-				margin-right auto
-				letter-spacing 2px
-				text-align center
 			.phone
 				position relative
 				top 0
 				z-index 2
-			.phone-bg
+			.screen-wrapper
 				position absolute
-				top 0
-			img.thumb
-				position absolute
-				top: 430px;
-				width 144px
-				right 6px
+				top: 106px;
+				bottom: 0;
+				left 20px
+				width 366px;
+				height 524px
+				overflow hidden;
+				.screen-wrapper-abs
+					position relative;
+					top:0
+					left: 0;
+					height 100%
+					background-color white;
+					overflow hidden;
+					> .line
+						width 328px
+						background-image url("../img/img_divider.png");
+						background-repeat no-repeat
+						background-position center
+						height 21px;
+						position absolute
+						top: 233px;
+						margin-left auto
+						margin-right auto
+						left 0
+						right 0
+					.wrapper-circle-phone
+						position absolute
+						margin-left auto
+						margin-right auto
+						width 156px
+						left 0
+						right 0
+						top 65px
+						border 3px solid $black
+						border-radius 138px
+						height 155px
+						z-index 10
+						text-align center
+						> img
+							width 151px
+							
+				.wrapper-box
+					width 400px;
+					position absolute
+					top 300px
+					left 0
+					right 0
+					margin-left auto
+					margin-right auto
+					background-color red
+				.phone-header
+					font-family "roboto-b"
+					font-size 33px
+					position absolute
+					top: 0;
+					color #3f3f3f
+					left 0px
+					right 0px
+					margin-left auto
+					margin-right auto
+					letter-spacing 2px
+					text-align center
+				.phone-bg
+					position absolute
+					top 0
 	.row
 		position relative
 		.wrapper-circle2
