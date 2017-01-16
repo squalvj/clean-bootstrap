@@ -9,17 +9,22 @@ $(document).ready(function($) {
 	TweenMax.set(section2_p, {opacity: "0"});
 	TweenMax.set($(".wrapper-circle2-h"), {opacity: "0"});
 	
-		var text = new SplitText(".phone-header", {linesChars:"line++"});
+	var text = new SplitText(".phone-header", {linesChars:"line++"});
 	function showPhone(){
 		var wrapper = $(".wrapper-circle-phone");
 		var img = $(".wrapper-circle-phone > img");
 		var line = $(".line");
+		var information = $(".information")
+		var paging = $(".paging")
 		TweenLite.set(".phone-header", {perspective:400});
 		TweenMax.staggerFrom(text.chars, 0.8, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50%", ease:Back.easeOut}, 0.2, allDone);
 		// TweenMax.from(wrapper, 1, {opacity:0, scale:0,y:-100, ease:Power3.easeInOut, delay:1}).repeat(2).yoyo(true).play();
 		TweenMax.from(wrapper, 1, {opacity:0, scale:0, ease:Back.easeInOut, delay:1});
 		TweenMax.from(img, 1, {opacity:0, scale:0,  ease:Back.easeOut, delay:1.5});
-		TweenMax.from(line, 1, {opacity:0, scale:0,  ease:Linear.easeInOut, delay:1.5});
+		TweenMax.from(line, 1, {opacity:0, scale:0,  ease:Power3.easeInOut, delay:1.5});
+		TweenMax.from(information, 1, {opacity:0, scale:0, y:30, rotationX:180, transformOrigin:"50%", delay:1.5});
+		TweenMax.from(paging, 1, {opacity:0, y:100,  ease:Power3.easeInOut, delay:2}).repeat(2).yoyo(true).play();
+
 	}
 
 	function allDone(){

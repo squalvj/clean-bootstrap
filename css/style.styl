@@ -33,6 +33,11 @@ h2
 h3
 	font-family "roboto-l"
 	font-size 15px
+
+h5
+	font-family "roboto-r"
+	font-size 18px
+
 	
 .absolute
 	position absolute !important
@@ -93,7 +98,7 @@ h3
 	.border
 		padding 20px
 		border 1px solid white
-		width 700px
+		width 60%
 		margin-left auto
 		margin-right auto
 		h2
@@ -154,12 +159,24 @@ h3
 				
 #section-second
 	min-height 100vh
-	background-color #64DDBB
+	background-color #1abc9c
+	> .container
+		position relative
+		z-index -10
+	#section2-right
+		background-color #1abc9c
+		width 50%
+		min-height 100vh
+		float left
+		padding: 5% 0px;
+		position relative
 	.second-parallax
 		width 50%
 		min-height 100vh;
 		position relative
-		padding 150px 0px
+		padding 5% 0px
+		background-color #64DDBB
+		float left
 		.phone-wrapper
 			width 400px
 			min-height auto
@@ -212,6 +229,29 @@ h3
 						text-align center
 						> img
 							width 151px
+					.information
+						position absolute
+						border 1px solid $black
+						border-radius 20px
+						color $black
+						width 90%
+						height 180px
+						margin 0 5%
+						bottom 80px
+						padding 10px 3%
+						.line-div
+							border-bottom 1px solid $black
+							height 1px
+							margin 0 15px
+							width 90%
+					.paging
+						position absolute
+						bottom 20px
+						width 100%
+						padding 5px 50px 0
+						z-index 10
+						img
+							width 60px
 							
 				.wrapper-box
 					width 400px;
