@@ -113,7 +113,7 @@ h5
 				font-size 22px
 				padding-bottom 10px
 	h1.header-up
-		margin-top 200px
+		margin-top 25%
 
 
 #section-first
@@ -129,7 +129,7 @@ h5
 		.border-bottom
 			margin-left auto
 			margin-right auto
-			width 650px
+			width 100%
 			border-bottom 2px solid $black
 	.trio
 		margin-top 80px
@@ -192,13 +192,13 @@ h5
 				top: 106px;
 				bottom: 0;
 				left 20px
-				width 366px;
+				width 362px;
 				height 524px
 				overflow hidden;
 			.phone
 				position relative
 				top 0
-				z-index 2
+				z-index 0
 			.screen-wrapper
 				position absolute
 				top: 0;
@@ -229,6 +229,18 @@ h5
 						margin-right auto
 						left 0
 						right 0
+					> .line2
+						width 328px
+						background-image url("../img/img_divider.png");
+						background-repeat no-repeat
+						background-position center
+						height 21px;
+						position absolute
+						top: 70px;
+						margin-left auto
+						margin-right auto
+						left 0
+						right 0
 					.wrapper-circle-phone
 						position absolute
 						margin-left auto
@@ -254,6 +266,16 @@ h5
 						margin 0 5%
 						bottom 80px
 						padding 10px 3%
+					.information2
+						position absolute
+						border 1px solid $black
+						border-radius 20px
+						color $black
+						width 90%
+						height 340px
+						margin 0 5%
+						top 110px
+						padding 10px 3%
 						.line-div
 							border-bottom 1px solid $black
 							height 1px
@@ -264,9 +286,11 @@ h5
 						bottom 20px
 						width 100%
 						padding 5px 50px 0
-						z-index 10
+						z-index 99 !important
 						img
 							width 60px
+						.arrow-l
+							margin-right 50%
 							
 				.wrapper-box
 					width 400px;

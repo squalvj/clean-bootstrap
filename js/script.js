@@ -7,17 +7,29 @@ $(document).ready(function($) {
 	var section2_p = $(".section-2-p");
 	TweenMax.from(header_title, 1.2, {y: "60", opacity:"0", ease:Power3.easeInOut, onComplete:showHeaderDesc()});
 	TweenMax.set(section2_p, {opacity: "0"});
+	TweenMax.set($(".paging"), {zIndex: "10"});
 	TweenMax.set($(".wrapper-circle2-h"), {opacity: "0"});
-	$("#to-screen2").hover(function() {
+	$(".arrow-r").hover(function() {
 		$(this).css('cursor', 'pointer');
 	}, function() {
 		$(this).css('cursor', 'auto');
 	});
-	$("#to-screen2").click(function(event) {
-		showPhone2();
+
+	$(".arrow-l").hover(function() {
+		$(this).css('cursor', 'pointer');
+	}, function() {
+		$(this).css('cursor', 'auto');
+	});
+
+	$(".arrow-r").click(function(event) {
+		toTheRight();
+	});
+	$(".arrow-l").click(function(event) {
+		toTheLeft();
 	});
 	
 	var text = new SplitText("#phone-header1", {linesChars:"line++"});
+	var phoneHeader2 = new SplitText("#phone-header2", {linesChars:"line++"});
 	function showPhone1(){
 		var wrapper = $(".wrapper-circle-phone");
 		var img = $(".wrapper-circle-phone > img");
@@ -31,13 +43,18 @@ $(document).ready(function($) {
 		TweenMax.from(img, 1, {opacity:0, scale:0,  ease:Back.easeOut, delay:1.5});
 		TweenMax.from(line, 1, {opacity:0, scale:0,  ease:Power3.easeInOut, delay:1.5});
 		TweenMax.from(information, 1, {opacity:0, scale:0, y:30, rotationX:180, transformOrigin:"50%", delay:1.5});
-		TweenMax.from(paging, 1, {opacity:0, y:100,  ease:Power3.easeInOut, delay:2}).repeat(2).yoyo(true).play();
+		TweenMax.from(paging, 1, {opacity:0, y:100,  ease:Power3.easeInOut, delay:2});
 
 	}
 
-	function showPhone2(){
+	function toTheRight(){
 		var screen2 = $(".screen-wrapper");
 		TweenLite.to(screen2,0.5, {x:"-366"})
+	}
+
+	function toTheLeft(){
+		var screen2 = $(".screen-wrapper");
+		TweenLite.to(screen2,0.5, {x:"0"})
 	}
 
 	function allDone(){
