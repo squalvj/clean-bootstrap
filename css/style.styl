@@ -170,6 +170,10 @@ h5
 		float left
 		padding: 5% 0px;
 		position relative
+		background-image url(../img/garis_vertikal.png)
+		background-size contain
+		background-repeat no-repeat
+		background-position bottom
 	.second-parallax
 		width 50%
 		min-height 100vh;
@@ -183,11 +187,7 @@ h5
 			margin-left auto
 			margin-right auto
 			position relative
-			.phone
-				position relative
-				top 0
-				z-index 2
-			.screen-wrapper
+			.screen-wrapper-parent
 				position absolute
 				top: 106px;
 				bottom: 0;
@@ -195,6 +195,19 @@ h5
 				width 366px;
 				height 524px
 				overflow hidden;
+			.phone
+				position relative
+				top 0
+				z-index 2
+			.screen-wrapper
+				position absolute
+				top: 0;
+				bottom: 0;
+				left 0
+				width 732px;
+				height 524px
+				overflow hidden;
+				background-color white
 				.screen-wrapper-abs
 					position relative;
 					top:0
@@ -202,6 +215,8 @@ h5
 					height 100%
 					background-color white;
 					overflow hidden;
+					width 366px
+					float left
 					> .line
 						width 328px
 						background-image url("../img/img_divider.png");

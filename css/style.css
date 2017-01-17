@@ -184,6 +184,10 @@ h5 {
   float: left;
   padding: 5% 0px;
   position: relative;
+  background-image: url("../img/garis_vertikal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 #section-second .second-parallax {
   width: 50%;
@@ -200,12 +204,7 @@ h5 {
   margin-right: auto;
   position: relative;
 }
-#section-second .second-parallax .phone-wrapper .phone {
-  position: relative;
-  top: 0;
-  z-index: 2;
-}
-#section-second .second-parallax .phone-wrapper .screen-wrapper {
+#section-second .second-parallax .phone-wrapper .screen-wrapper-parent {
   position: absolute;
   top: 106px;
   bottom: 0;
@@ -214,6 +213,21 @@ h5 {
   height: 524px;
   overflow: hidden;
 }
+#section-second .second-parallax .phone-wrapper .phone {
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+#section-second .second-parallax .phone-wrapper .screen-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 732px;
+  height: 524px;
+  overflow: hidden;
+  background-color: #fff;
+}
 #section-second .second-parallax .phone-wrapper .screen-wrapper .screen-wrapper-abs {
   position: relative;
   top: 0;
@@ -221,6 +235,8 @@ h5 {
   height: 100%;
   background-color: #fff;
   overflow: hidden;
+  width: 366px;
+  float: left;
 }
 #section-second .second-parallax .phone-wrapper .screen-wrapper .screen-wrapper-abs > .line {
   width: 328px;

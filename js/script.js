@@ -8,9 +8,17 @@ $(document).ready(function($) {
 	TweenMax.from(header_title, 1.2, {y: "60", opacity:"0", ease:Power3.easeInOut, onComplete:showHeaderDesc()});
 	TweenMax.set(section2_p, {opacity: "0"});
 	TweenMax.set($(".wrapper-circle2-h"), {opacity: "0"});
+	$("#to-screen2").hover(function() {
+		$(this).css('cursor', 'pointer');
+	}, function() {
+		$(this).css('cursor', 'auto');
+	});
+	$("#to-screen2").click(function(event) {
+		showPhone2();
+	});
 	
-	var text = new SplitText(".phone-header", {linesChars:"line++"});
-	function showPhone(){
+	var text = new SplitText("#phone-header1", {linesChars:"line++"});
+	function showPhone1(){
 		var wrapper = $(".wrapper-circle-phone");
 		var img = $(".wrapper-circle-phone > img");
 		var line = $(".line");
@@ -25,6 +33,11 @@ $(document).ready(function($) {
 		TweenMax.from(information, 1, {opacity:0, scale:0, y:30, rotationX:180, transformOrigin:"50%", delay:1.5});
 		TweenMax.from(paging, 1, {opacity:0, y:100,  ease:Power3.easeInOut, delay:2}).repeat(2).yoyo(true).play();
 
+	}
+
+	function showPhone2(){
+		var screen2 = $(".screen-wrapper");
+		TweenLite.to(screen2,0.5, {x:"-366"})
 	}
 
 	function allDone(){
@@ -71,7 +84,7 @@ $(document).ready(function($) {
 		i++;
 	   }
 	   if(wS > 1200 && i < 2){
-	   	showPhone();
+	   	showPhone1();
 	   	i++
 	   }
 	});
